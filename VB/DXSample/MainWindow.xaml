@@ -1,0 +1,60 @@
+﻿<dx:DXWindow x:Class="DXSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        Title="MainWindow" Height="350" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <dxb:BarContainerControl ContainerType="Top">
+                <dxb:MainMenuControl>
+                    <dxb:BarButtonItem Content="Notebook"
+                               Glyph="{dx:SvgImageSource Uri=Images/Notebook.svg}"
+                               BarItemDisplayMode="ContentAndGlyph"
+                               GlyphSize="{Binding ElementName=sizeEditor, Path=EditValue}"/>
+                    <dxb:BarButtonItem Content="Notebook"
+                               Glyph="{dx:SvgImageSource Uri=Images/Notebook 1.svg}"
+                               BarItemDisplayMode="ContentAndGlyph"
+                               GlyphSize="{Binding ElementName=sizeEditor, Path=EditValue}"/>
+                    <dxb:BarButtonItem Content="Notebook"
+                               Glyph="{dx:SvgImageSource Uri=Images/Notebook 2.svg}"
+                               BarItemDisplayMode="ContentAndGlyph"
+                               GlyphSize="{Binding ElementName=sizeEditor, Path=EditValue}"/>
+                </dxb:MainMenuControl>
+            </dxb:BarContainerControl>
+            <Grid.LayoutTransform>
+                <ScaleTransform ScaleX="{Binding Path=EditValue, ElementName=scaleEditor, Mode=TwoWay}"
+                                ScaleY="{Binding Path=EditValue, ElementName=scaleEditor, Mode=TwoWay}"/>
+            </Grid.LayoutTransform>
+        </Grid>
+        <Grid Grid.Column="1">
+            <GroupBox Header="Settings" Margin="5">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="{DXBinding '`GlyphSize: `+@e(sizeEditor).EditValue'}"
+                               Margin="0 5 0 2"/>
+                    <dxe:ComboBoxEdit Name="sizeEditor"
+                                      ItemsSource="{dxe:EnumItemsSource EnumType={x:Type dxb:GlyphSize}}">
+                        <dxe:ComboBoxEdit.EditValue>
+                            <dxb:GlyphSize>Large</dxb:GlyphSize>
+                        </dxe:ComboBoxEdit.EditValue>
+                    </dxe:ComboBoxEdit>
+                    <TextBlock Text="{DXBinding '`Scale: `+@e(scaleEditor).EditValue'}"
+                               Margin="0 10 0 2"/>
+                    <dxe:TrackBarEdit Name="scaleEditor"
+                                      SmallStep="1"
+                                      LargeStep="1"
+                                      EditValue="3"
+                                      Minimum="1"
+                                      Maximum="5"
+                                      TickPlacement="BottomRight"
+                                      TickFrequency="1"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</dx:DXWindow>
