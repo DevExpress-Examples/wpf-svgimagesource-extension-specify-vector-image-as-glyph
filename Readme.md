@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/DXSample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DXSample/MainWindow.xaml))
+<!-- default file list end -->
 # How to use the SvgImageSource extension to specify a vector image as BarButtonItem's glyph 
 
 
