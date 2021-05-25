@@ -14,8 +14,4 @@ Glyph="{dx:SvgImageSource Uri=Images/Notebook.svg}"
 ```
 
 
-where <em><strong>dx</strong> </em>is the <strong>xmlns:dx="<a href="http://schemas.devexpress.com/winfx/2008/xaml/core">http://schemas.devexpress.com/winfx/2008/xaml/core</a>"</strong> namespace.
-
-<br/>
-
-
+where **dx** is the `xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"` namespace.
