@@ -1,16 +1,15 @@
-﻿Imports DevExpress.Xpf.Core
-Imports System
-Imports System.Linq
+Imports DevExpress.Xpf.Core
 
 Namespace DXSample
+
     ''' <summary>
     ''' Interaction logic for MainWindow.xaml
     ''' </summary>
-    Partial Public Class MainWindow
+    Public Partial Class MainWindow
         Inherits DXWindow
 
         Public Sub New()
-            InitializeComponent()
+            Me.InitializeComponent()
         End Sub
     End Class
 End Namespace
