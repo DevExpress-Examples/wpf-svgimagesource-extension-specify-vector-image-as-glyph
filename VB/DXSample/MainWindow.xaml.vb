@@ -1,12 +1,9 @@
-Imports DevExpress.Xpf.Core
+Imports System.Windows
 
 Namespace DXSample
 
-    ''' <summary>
-    ''' Interaction logic for MainWindow.xaml
-    ''' </summary>
     Public Partial Class MainWindow
-        Inherits DXWindow
+        Inherits Window
 
         Public Sub New()
             Me.InitializeComponent()
