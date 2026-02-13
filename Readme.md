@@ -22,7 +22,7 @@ Glyph="{dx:SvgImageSource Uri=Images/Notebook.svg}"
 
 where **dx** is the `xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"` namespace.
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-svgimagesource-extension-specify-vector-image-as-glyph&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-svgimagesource-extension-specify-vector-image-as-glyph&~~~was_helpful=no)
 
